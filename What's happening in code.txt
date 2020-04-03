@@ -1,0 +1,8 @@
+# motion_detector1
+first step, movement is difference between two frames 
+second, difference has noises because of details and light on video so gaussian blurring is eliminating the noises,
+third, obtaining threshold from clean difference
+fourth, dilating for eliminating district small weak threshold lines which corrupt healthy threshold detection
+fifth, finding contours from clean threshold
+sixth, eliminating small contours which can not be a human by filtering contour area
+seventh, drawing rectangles for each detected contour on the frame, rectangle dimensions obtained from cv2.boundingRect(contour)
